@@ -7,22 +7,28 @@ root.geometry("315x300")
 
 #Entry Widget
 Entry_Widget=t.Entry(root,width=50,borderwidth=5)
+
+# Functions
+def button_clicked(number):
+    current=Entry_Widget.get()
+    Entry_Widget.delete(0)
+    Entry_Widget.insert(0,str(number)+str(current))
 # buttons in calculator
-button_1=t.Button(root,text="1",padx=20,pady=20,borderwidth=3)
-button_2=t.Button(root,text="2",padx=20,pady=20,borderwidth=3)
-button_3=t.Button(root,text="3",padx=20,pady=20,borderwidth=3)
-button_4=t.Button(root,text="4",padx=20,pady=20,borderwidth=3)
-button_5=t.Button(root,text="5",padx=20,pady=20,borderwidth=3)
-button_6=t.Button(root,text="6",padx=20,pady=20,borderwidth=3)
-button_7=t.Button(root,text="7",padx=20,pady=20,borderwidth=3)
-button_8=t.Button(root,text="8",padx=20,pady=20,borderwidth=3)
-button_9=t.Button(root,text="9",padx=20,pady=20,borderwidth=3)
-button_0=t.Button(root,text="0",padx=50,pady=20,borderwidth=3)
+button_1=t.Button(root,text="1",padx=20,pady=20,borderwidth=3,command=lambda : button_clicked(1))
+button_2=t.Button(root,text="2",padx=20,pady=20,borderwidth=3,command=lambda : button_clicked(2))
+button_3=t.Button(root,text="3",padx=20,pady=20,borderwidth=3,command=lambda : button_clicked(3))
+button_4=t.Button(root,text="4",padx=20,pady=20,borderwidth=3,command=lambda : button_clicked(4))
+button_5=t.Button(root,text="5",padx=20,pady=20,borderwidth=3,command=lambda : button_clicked(5))
+button_6=t.Button(root,text="6",padx=20,pady=20,borderwidth=3,command=lambda : button_clicked(6))
+button_7=t.Button(root,text="7",padx=20,pady=20,borderwidth=3,command=lambda : button_clicked(7))
+button_8=t.Button(root,text="8",padx=20,pady=20,borderwidth=3,command=lambda : button_clicked(8))
+button_9=t.Button(root,text="9",padx=20,pady=20,borderwidth=3,command=lambda : button_clicked(9))
+button_0=t.Button(root,text="0",padx=50,pady=20,borderwidth=3,command=lambda : button_clicked(0))
 button_clear=t.Button(root,text="Clear",padx=50,pady=20)
 button_add=t.Button(root,text="+",padx=30,pady=53,borderwidth=3)        #padx=30,pady=50
 button_sub=t.Button(root,text="-",padx=20,pady=20,borderwidth=3)
 button_mult=t.Button(root,text="X",padx=20,pady=20,borderwidth=3)
-button_div=t.Button(root,text="/",padx=20,pady=20,borderwidth=3)
+button_div=t.Button(root,text="/",padx=20,pady=20,borderwidth=3,command=lambda : button_clicked('.'))
 button_equal=t.Button(root,text='=',padx=30,pady=20,borderwidth=3)
 button_decimal=t.Button(root,text='.',padx=20,pady=20,borderwidth=3)
 
