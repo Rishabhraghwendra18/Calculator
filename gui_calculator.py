@@ -9,43 +9,58 @@ root.geometry("315x300")
 Entry_Widget=t.Entry(root,width=50,borderwidth=5)
 
 # Functions
+first=0
+second=0
+sign=''
 def button_clicked(number):
-    global first
     first=Entry_Widget.get()
     Entry_Widget.delete(0,'end')
     Entry_Widget.insert(0,str(first)+str(number))
+    # first=int(Entry_Widget.get())
 def add():
-    global second
+    global first
     global sign
+    first=Entry_Widget.get()
     sign='+'
     Entry_Widget.delete(0,'end')
-    second=Entry_Widget.get()
+    
 
 def sub():
+    global first
+    global sign
+    first=Entry_Widget.get()
     sign='-'
     Entry_Widget.delete(0,'end')
-    second=Entry_Widget.get()
+    
 
 def mult():
+    global first
+    global sign
+    first=Entry_Widget.get()
     sign='*'
     Entry_Widget.delete(0,'end')
-    second=Entry_Widget.get()
+    
 
 def div():
+    global first
+    global sign
+    first=Entry_Widget.get()
     sign='/'
     Entry_Widget.delete(0,'end')
-    second=Entry_Widget.get()
+    
 
 def equal():
+    global second
+    second=Entry_Widget.get() 
     Entry_Widget.delete(0,'end')
-    if (sign=='+'):
-        Entry_Widget.insert(0,int(first)+int(second))
+    if sign=='+':
+        Entry_Widget.insert(0,float(first)+float(second))
     elif sign=='-':
-        Entry_Widget.insert(0,int(first)-int(second))
+        Entry_Widget.insert(0,first-second)
     elif sign=='*':
-        Entry_Widget.insert(0,int(first)*int(second))
+        Entry_Widget.insert(0,first*second)
     elif sign=='/':
-        Entry_Widget.insert(0,int(first)/int(second))
+        Entry_Widget.insert(0,first/second)
 
 def button_clearf():
     Entry_Widget.delete(0,'end')
