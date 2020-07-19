@@ -11,8 +11,8 @@ Entry_Widget=t.Entry(root,width=50,borderwidth=5)
 # Functions
 def button_clicked(number):
     current=Entry_Widget.get()
-    Entry_Widget.delete(0)
-    Entry_Widget.insert(0,str(number)+str(current))
+    Entry_Widget.delete(0,'end')
+    Entry_Widget.insert(0,str(current)+str(number))
 
 def button_clearf():
     Entry_Widget.delete(0,'end')
@@ -28,7 +28,7 @@ button_8=t.Button(root,text="8",padx=20,pady=20,borderwidth=3,command=lambda : b
 button_9=t.Button(root,text="9",padx=20,pady=20,borderwidth=3,command=lambda : button_clicked(9))
 button_0=t.Button(root,text="0",padx=50,pady=20,borderwidth=3,command=lambda : button_clicked(0))
 button_clear=t.Button(root,text="Clear",padx=50,pady=20,command=button_clearf)
-button_add=t.Button(root,text="+",padx=30,pady=53,borderwidth=3)        #padx=30,pady=50
+button_add=t.Button(root,text="+",padx=30,pady=54,borderwidth=3)        #padx=30,pady=50
 button_sub=t.Button(root,text="-",padx=20,pady=20,borderwidth=3)
 button_mult=t.Button(root,text="X",padx=20,pady=20,borderwidth=3)
 button_div=t.Button(root,text="/",padx=20,pady=20,borderwidth=3,command=lambda : button_clicked('.'))
