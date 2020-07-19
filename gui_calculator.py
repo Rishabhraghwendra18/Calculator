@@ -2,8 +2,8 @@ import tkinter as t
 root=t.Tk()
 root.title("Calculator")
 root.geometry("315x300")
-# root.maxsize(318,500)
-# root.minsize(318,500)
+root.maxsize(315,300)
+root.minsize(315,300)
 
 #Entry Widget
 Entry_Widget=t.Entry(root,width=50,borderwidth=5)
