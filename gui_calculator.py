@@ -13,6 +13,9 @@ def button_clicked(number):
     current=Entry_Widget.get()
     Entry_Widget.delete(0)
     Entry_Widget.insert(0,str(number)+str(current))
+
+def button_clearf():
+    Entry_Widget.delete(0,'end')
 # buttons in calculator
 button_1=t.Button(root,text="1",padx=20,pady=20,borderwidth=3,command=lambda : button_clicked(1))
 button_2=t.Button(root,text="2",padx=20,pady=20,borderwidth=3,command=lambda : button_clicked(2))
@@ -24,7 +27,7 @@ button_7=t.Button(root,text="7",padx=20,pady=20,borderwidth=3,command=lambda : b
 button_8=t.Button(root,text="8",padx=20,pady=20,borderwidth=3,command=lambda : button_clicked(8))
 button_9=t.Button(root,text="9",padx=20,pady=20,borderwidth=3,command=lambda : button_clicked(9))
 button_0=t.Button(root,text="0",padx=50,pady=20,borderwidth=3,command=lambda : button_clicked(0))
-button_clear=t.Button(root,text="Clear",padx=50,pady=20)
+button_clear=t.Button(root,text="Clear",padx=50,pady=20,command=button_clearf)
 button_add=t.Button(root,text="+",padx=30,pady=53,borderwidth=3)        #padx=30,pady=50
 button_sub=t.Button(root,text="-",padx=20,pady=20,borderwidth=3)
 button_mult=t.Button(root,text="X",padx=20,pady=20,borderwidth=3)
