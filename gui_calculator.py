@@ -1,7 +1,7 @@
 import tkinter as t 
 root=t.Tk()
 root.title("Calculator")
-root.geometry("318x500")
+root.geometry("315x300")
 # root.maxsize(318,500)
 # root.minsize(318,500)
 
@@ -19,7 +19,7 @@ button_8=t.Button(root,text="8",padx=20,pady=20,borderwidth=3)
 button_9=t.Button(root,text="9",padx=20,pady=20,borderwidth=3)
 button_0=t.Button(root,text="0",padx=50,pady=20,borderwidth=3)
 button_clear=t.Button(root,text="Clear",padx=50,pady=20)
-button_add=t.Button(root,text="+",padx=30,pady=50,borderwidth=3)        #padx=30,pady=50
+button_add=t.Button(root,text="+",padx=30,pady=53,borderwidth=3)        #padx=30,pady=50
 button_sub=t.Button(root,text="-",padx=20,pady=20,borderwidth=3)
 button_mult=t.Button(root,text="X",padx=20,pady=20,borderwidth=3)
 button_div=t.Button(root,text="/",padx=20,pady=20,borderwidth=3)
