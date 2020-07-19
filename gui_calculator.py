@@ -49,18 +49,38 @@ def div():
     Entry_Widget.delete(0,'end')
     
 
+def intequal():
+    if sign=='+':
+        Entry_Widget.insert(0,int(first)+int(second))
+    elif sign=='-':
+        Entry_Widget.insert(0,int(first)-int(second))
+    elif sign=='*':
+        Entry_Widget.insert(0,int(first)*int(second))
+    elif sign=='/':
+        if int(second)==0:
+            Entry_Widget.insert(0,"infinity")
+        else :
+            Entry_Widget.insert(0,int(first)/int(second))
+
+
 def equal():
+    global first
     global second
     second=Entry_Widget.get() 
     Entry_Widget.delete(0,'end')
-    if sign=='+':
-        Entry_Widget.insert(0,float(first)+float(second))
-    elif sign=='-':
-        Entry_Widget.insert(0,first-second)
-    elif sign=='*':
-        Entry_Widget.insert(0,first*second)
-    elif sign=='/':
-        Entry_Widget.insert(0,first/second)
+    f=float(first)
+    s=float(second)
+    if f.is_integer() and s.is_integer():
+        intequal()
+    else :
+        if sign=='+':
+            Entry_Widget.insert(0,float(first)+float(second))
+        elif sign=='-':
+            Entry_Widget.insert(0,float(first)-float(second))
+        elif sign=='*':
+            Entry_Widget.insert(0,float(first)*float(second))
+        elif sign=='/':
+            Entry_Widget.insert(0,float(first)/float(second))
 
 def button_clearf():
     Entry_Widget.delete(0,'end')
